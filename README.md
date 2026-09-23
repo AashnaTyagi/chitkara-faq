@@ -21,8 +21,6 @@
 
 🌐 **Live application:** https://chitkara-faq.vercel.app
 
-💻 **Source code:** https://github.com/AashnaTyagi/chitkara-faq
-
 ### Example questions
 
 - What are the hostel facilities at Chitkara University?
