@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: uniassist-ai
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn app:app --app-dir backend --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: FOUNDRY_PROJECT_ENDPOINT
+        value: https://uniassist-resource.services.ai.azure.com/api/projects/uniassist
+      - key: MAIN_AGENT_NAME
+        value: chitkara-main-agent
+      - key: KB_AGENT_NAME
+        value: chitkara-kb-agent
+      - key: SHOW_AGENT_TRACE
+        value: "true"
+      - key: MAX_REQUESTS_PER_MINUTE
+        value: "15"
+      # Secrets: fill these in the Render dashboard, never in this file.
+      - key: AZURE_TENANT_ID
+        sync: false
+      - key: AZURE_CLIENT_ID
+        sync: false
+      - key: AZURE_CLIENT_SECRET
+        sync: false

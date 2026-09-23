@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>UniAssist-Ai</title>
+  <meta name="description" content="Ask about admissions, fees, hostel, buses and campus life at Chitkara University Punjab.">
+  <!-- Leave empty when the backend serves this page. Set to e.g. https://your-api.onrender.com if hosted separately. -->
+  <meta name="api-base" content="">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="UniAssist-Ai home">
+        <img class="brand-mark" src="logo.png" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">UniAssist-Ai</span>
+          <span class="brand-sub">Admissions, fees, hostel, buses and campus life</span>
+        </span>
+      </a>
+      <button id="newChat" class="btn-ghost" type="button" hidden>New chat</button>
+    </div>
+  </header>
+
+  <main id="scroller" class="scroller">
+    <div class="column">
+      <section id="welcome" class="welcome">
+        <h1>What do you want to know about Chitkara University, Punjab?</h1>
+        <p class="lede">Answers come from the university's published fee structures, regulations, notices and bus routes. Pick a question or type your own.</p>
+
+        <div class="topics" id="topics">
+          <div class="topic">
+            <h2>Admissions</h2>
+            <div class="asks">
+              <button type="button" class="ask">How do I apply for B.E.?</button>
+              <button type="button" class="ask">What documents do I need for counselling?</button>
+            </div>
+          </div>
+          <div class="topic">
+            <h2>Fees</h2>
+            <div class="asks">
+              <button type="button" class="ask">What is the B.E. CSE fee?</button>
+              <button type="button" class="ask">Can I pay the fee in instalments?</button>
+            </div>
+          </div>
+          <div class="topic">
+            <h2>Hostel</h2>
+            <div class="asks">
+              <button type="button" class="ask">What are the hostel fees?</button>
+              <button type="button" class="ask">How do gate passes work?</button>
+            </div>
+          </div>
+          <div class="topic">
+            <h2>Buses</h2>
+            <div class="asks">
+              <button type="button" class="ask">Which bus goes from Zirakpur?</button>
+              <button type="button" class="ask">What is the bus fee from Chandigarh?</button>
+            </div>
+          </div>
+          <div class="topic">
+            <h2>Academics</h2>
+            <div class="asks">
+              <button type="button" class="ask">What is the minimum attendance required?</button>
+              <button type="button" class="ask">What happens if I fail a subject?</button>
+            </div>
+          </div>
+          <div class="topic">
+            <h2>Campus</h2>
+            <div class="asks">
+              <button type="button" class="ask">What are the gym and library timings?</button>
+              <button type="button" class="ask">Which food outlets are on campus?</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ol id="log" class="log" aria-live="polite" aria-label="Conversation"></ol>
+    </div>
+  </main>
+
+  <footer class="composer-wrap">
+    <form id="composer" class="composer" autocomplete="off">
+      <label for="input" class="sr-only">Your question</label>
+      <textarea id="input" rows="1" maxlength="1000" placeholder="Type your question" required></textarea>
+      <button id="send" type="submit" class="btn-send" aria-label="Send question">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-2.5-6.5L4 12z" fill="currentColor"/></svg>
+      </button>
+    </form>
+    <p class="fineprint">Unofficial student project. Confirm fees and deadlines with the admissions office before you pay or apply.</p>
+  </footer>
+
+  <script src="vendor/marked.min.js"></script>
+  <script src="vendor/purify.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
