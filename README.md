@@ -326,3 +326,16 @@ chosen as the primary production target.
 - [ ] Tighten `ALLOWED_ORIGINS` if the frontend is ever split onto a different domain than the API
 - [ ] Add automated tests for API validation, scope handling, tool invocation, and response formatting
 - [ ] Add evaluation cases to measure retrieval accuracy and out-of-scope handling
+
+
+
+## 📄 License & Usage
+
+© 2026 Aashna Tyagi. All rights reserved.
+
+This repository is publicly available for **viewing, learning, and portfolio/recruitment evaluation**.
+
+The source code, project structure, documentation, prompts, and original implementation may **not be copied, modified, redistributed, republished, or used in another project without explicit permission from the author**.
+
+Third-party libraries, frameworks, APIs, models, and other dependencies remain subject to their respective licenses and terms.
+
